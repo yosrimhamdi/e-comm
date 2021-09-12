@@ -9,3 +9,7 @@ env:
 heroku:
 	git push heroku master
 	heroku open
+
+both:
+	$(MAKE) git
+	$(MAKE) heroku
