@@ -5,3 +5,7 @@ git:
 
 env:
 	node updateRemoteEnv.js
+
+heroku:
+	git push heroku master
+	heroku open
