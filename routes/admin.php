@@ -5,7 +5,10 @@ use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
   Route::get('/login', [AdminController::class, 'loginForm']);
-  Route::get('/dashboard', [AdminController::class, 'dashBoardPage']);
+  Route::get('/dashboard', [
+    AdminController::class,
+    'dashBoardPage',
+  ])->middleware('auth:admin');
 
   $limiter = config('fortify.limiters.login');
 
