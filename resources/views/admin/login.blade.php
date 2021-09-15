@@ -14,7 +14,7 @@
 
     <form
       method="POST"
-      action="{{ url('/admin/login') }}"
+      action="{{ route('admin.login') }}"
     >
       @csrf
 

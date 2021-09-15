@@ -2,7 +2,17 @@
 
 use App\Http\Controllers\AdminController;
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
   Route::get('/login', [AdminController::class, 'index']);
-  Route::post('/login', [AdminController::class, 'store']);
+
+  $limiter = config('fortify.limiters.login');
+
+  Route::post('/login', [AuthenticatedSessionController::class, 'store'])
+    ->middleware(
+      array_filter([
+        'guest:' . config('fortify.guard'),
+        $limiter ? 'throttle:' . $limiter : null,
+      ])
+    )
+    ->name('login');
 });
