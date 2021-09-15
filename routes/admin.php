@@ -5,10 +5,6 @@ use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
   Route::get('/login', [AdminController::class, 'loginForm']);
-  Route::get('/dashboard', [
-    AdminController::class,
-    'dashBoardPage',
-  ])->middleware('auth:admin');
 
   $limiter = config('fortify.limiters.login');
 
@@ -21,3 +17,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     )
     ->name('login');
 });
+
+Route::group(
+  ['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:admin'],
+  function () {
+    Route::get('/dashboard', [AdminController::class, 'dashBoardPage']);
+
+    Route::post('/logout', [
+      AuthenticatedSessionController::class,
+      'destroy',
+    ])->name('logout');
+  }
+);
