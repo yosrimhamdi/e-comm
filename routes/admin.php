@@ -10,7 +10,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
   Route::post('/login', [AuthenticatedSessionController::class, 'store'])
     ->middleware(
       array_filter([
-        'guest:' . config('fortify.guard'),
+        'guest:admin' . config('fortify.guard'),
         $limiter ? 'throttle:' . $limiter : null,
       ])
     )
