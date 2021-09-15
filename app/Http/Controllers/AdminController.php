@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
-class AdminController extends Controller {
+class AdminController extends AuthenticatedSessionController {
   public function loginForm() {
     return view('admin.login');
-  }
-
-  public function store() {
-    echo 'will login';
   }
 
   public function dashboardPage() {

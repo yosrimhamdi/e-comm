@@ -1,16 +1,11 @@
 <?php
 
 use App\Http\Controllers\AdminController;
-use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-  Route::get('/login', [AdminController::class, 'loginForm'])->middleware(
-    'guest:admin'
-  );
-
   $limiter = config('fortify.limiters.login');
 
-  Route::post('/login', [AuthenticatedSessionController::class, 'store'])
+  Route::post('/login', [AdminController::class, 'store'])
     ->middleware(
       array_filter([
         'guest:' . config('fortify.guard'),
@@ -18,16 +13,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
       ])
     )
     ->name('login');
-});
 
-Route::group(
-  ['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:admin'],
-  function () {
+  // should be logged in: auth:admin
+  Route::group(['middleware' => 'auth:admin'], function () {
     Route::get('/dashboard', [AdminController::class, 'dashBoardPage']);
 
-    Route::post('/logout', [
-      AuthenticatedSessionController::class,
-      'destroy',
-    ])->name('logout');
-  }
-);
+    Route::post('/logout', [AdminController::class, 'destroy'])->name('logout');
+  });
+
+  // should not be logged in: guest:admin
+  Route::group(['middleware' => 'guest:admin'], function () {
+    Route::get('/login', [AdminController::class, 'loginForm']);
+  });
+});
