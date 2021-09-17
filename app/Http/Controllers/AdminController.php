@@ -6,7 +6,7 @@ use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 class AdminController extends AuthenticatedSessionController {
   public function loginForm() {
-    return view('admin.login');
+    return view('auth.admin-login');
   }
 
   public function dashboardPage() {
