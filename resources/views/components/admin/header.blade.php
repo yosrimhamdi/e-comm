@@ -163,7 +163,7 @@
               <div class="dropdown-divider"></div>
               <form
                 method="POST"
-                action="{{ route('logout') }}"
+                action="{{ route('admin.logout') }}"
               >
                 @csrf
                 <button
@@ -171,7 +171,6 @@
                   class="dropdown-item"
                   href="#"
                 ><i class="ti-lock text-muted mr-2"></i> Logout</button>
-
               </form>
             </li>
           </ul>
