@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller {
   public function profilePage() {
-    return view('admin.profile');
+    $admin = admin();
+
+    return view('admin.profile', compact('admin'));
   }
 }

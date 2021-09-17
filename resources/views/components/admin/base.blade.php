@@ -56,7 +56,9 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <div class="container-full">
-        {{ $slot }}
+        <section class="content">
+          <div class="row">{{ $slot }}</div>
+        </section>
       </div>
     </div>
     <!-- /.content-wrapper -->
