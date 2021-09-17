@@ -161,10 +161,18 @@
                 href="#"
               ><i class="ti-settings text-muted mr-2"></i> Settings</a>
               <div class="dropdown-divider"></div>
-              <a
-                class="dropdown-item"
-                href="#"
-              ><i class="ti-lock text-muted mr-2"></i> Logout</a>
+              <form
+                method="POST"
+                action="{{ route('logout') }}"
+              >
+                @csrf
+                <button
+                  type="submit"
+                  class="dropdown-item"
+                  href="#"
+                ><i class="ti-lock text-muted mr-2"></i> Logout</button>
+
+              </form>
             </li>
           </ul>
         </li>
