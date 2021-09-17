@@ -30,7 +30,7 @@
             <li class="user-body">
               <a
                 class="dropdown-item"
-                href="#"
+                href="{{ route('admin.profile') }}"
               ><i class="ti-user text-muted mr-2"></i> Profile</a>
               <a
                 class="dropdown-item"

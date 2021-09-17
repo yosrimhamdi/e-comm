@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
-class AdminController extends AuthenticatedSessionController {
+class AuthController extends AuthenticatedSessionController {
   public function loginForm() {
     return view('auth.admin-login');
   }
