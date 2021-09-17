@@ -103,7 +103,7 @@
                     <div class="fog-pwd text-right">
                       <a
                         href="javascript:void(0)"
-                        class="text-white hover-info"
+                        class="text-white"
                       ><i class="ion ion-locked"></i> Forgot password?</a><br>
                     </div>
                   </div>
