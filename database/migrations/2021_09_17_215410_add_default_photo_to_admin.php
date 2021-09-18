@@ -14,7 +14,7 @@ class AddDefaultPhotoToAdmin extends Migration {
     Schema::table('admins', function (Blueprint $table) {
       $table
         ->string('profile_photo_path', 2048)
-        ->default('admin/images/default.png')
+        ->default('profile-photos/default.png')
         ->change();
     });
   }
