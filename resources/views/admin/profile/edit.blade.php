@@ -1,9 +1,8 @@
 <x-admin.base>
   <div>
-
     <div class="widget-user-image">
       <img
-        class="rounded-circle"
+        class="rounded-circle user-photo"
         src="{{ asset(admin()->profile_photo_path) }}"
         alt="User Avatar"
       >
@@ -25,7 +24,7 @@
               <input
                 type="file"
                 name="photo"
-                class="form-control"
+                class="form-control photo-input"
               >
             </div>
           </div>
@@ -63,4 +62,5 @@
           </div>
     </form>
   </div>
+  <script src="{{ asset('/admin/js/updatePhotoOnChange.js') }}"></script>
 </x-admin.base>
