@@ -8,7 +8,6 @@ class ProfileController extends Controller {
   public function profilePage() {
     $admin = admin();
 
-    // return view('admin.profile', compact('admin'));
-    return view('profile.show', compact('admin'));
+    return view('admin.profile', compact('admin'));
   }
 }

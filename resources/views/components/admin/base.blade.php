@@ -23,15 +23,12 @@
     rel="icon"
     href="{{ url('/admin/images/favicon.ico') }}"
   >
-
   <title>Sunny Admin - Dashboard</title>
-
   <!-- Vendors Style-->
   <link
     rel="stylesheet"
     href="{{ url('/admin/css/vendors_css.css') }}"
   >
-
   <!-- Style-->
   <link
     rel="stylesheet"
@@ -41,52 +38,34 @@
     rel="stylesheet"
     href="{{ url('/admin/css/skin_color.css') }}"
   >
-
 </head>
 
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
-
   <div class="wrapper">
-
     <x-admin.header />
-
-    <!-- Left side column. contains the logo and sidebar -->
     <x-admin.side-bar />
-
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <div class="container-full">
+        <!-- Main content -->
         <section class="content">
-          <div class="row">{{ $slot }}</div>
+          <div class="row">
+            {{ $slot }}
+          </div>
         </section>
       </div>
     </div>
-    <!-- /.content-wrapper -->
     <x-admin.footer />
-
-    <!-- Control Sidebar -->
-
-    <!-- /.control-sidebar -->
-
-    <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-
   </div>
   <!-- ./wrapper -->
-
-
   <!-- Vendor JS -->
   <script src="{{ url('/admin/js/vendors.min.js') }}"></script>
   <script src="{{ url('/assets/icons/feather-icons/feather.min.js') }}"></script>
   <script src="{{ url('/assets/vendor_components/easypiechart/dist/jquery.easypiechart.js') }}"></script>
   <script src="{{ url('/assets/vendor_components/apexcharts-bundle/irregular-data-series.js') }}"></script>
   <script src="{{ url('/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js') }}"></script>
-
   <!-- Sunny Admin App -->
   <script src="{{ url('/admin/js/template.js') }}"></script>
   <script src="{{ url('/admin/js/pages/dashboard.js') }}"></script>
-
-
 </body>
 
 </html>
