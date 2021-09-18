@@ -24,7 +24,7 @@
     >
 
       <li class="active">
-        <a href="index.html">
+        <a href="{{ url('/admin/dashboard') }}">
           <i data-feather="pie-chart"></i>
           <span>Dashboard</span>
         </a>
