@@ -19,8 +19,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
   Route::group(['middleware' => 'auth:admin'], function () {
     Route::get('/dashboard', [AuthController::class, 'dashBoardPage']);
 
-    Route::get('/profile', [ProfileController::class, 'profilePage'])->name(
+    Route::get('/profile', [ProfileController::class, 'index'])->name(
       'profile'
+    );
+    Route::get('/profile/edit', [ProfileController::class, 'editForm'])->name(
+      'profile.edit'
+    );
+    Route::post('/profile', [ProfileController::class, 'update'])->name(
+      'profile.update'
     );
 
     Route::post('/logout', [AuthController::class, 'destroy'])->name('logout');
