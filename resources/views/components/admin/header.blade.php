@@ -22,7 +22,7 @@
             title="User"
           >
             <img
-              src="{{ url('/admin/images/avatar/1.jpg') }}"
+              src="{{ asset(admin()->profile_photo_path) }}"
               alt=""
             >
           </a>
