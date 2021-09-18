@@ -49,4 +49,5 @@
       <!-- /.row -->
     </div>
   </div>
+  <x-toastr />
 </x-admin.base>
