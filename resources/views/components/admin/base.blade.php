@@ -37,19 +37,6 @@
     rel="stylesheet"
     href="{{ asset('/admin/css/skin_color.css') }}"
   >
-
-  <link
-    rel="stylesheet"
-    href="{{ mix('css/app.css') }}"
-  >
-
-  @livewireStyles
-
-  <!-- Scripts -->
-  <script
-    src="{{ mix('js/app.js') }}"
-    defer
-  ></script>
 </head>
 
 <body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
@@ -66,10 +53,6 @@
     </div>
     <x-admin.footer />
   </div>
-  @stack('modals')
-
-  @livewireScripts
-
   <script src="{{ asset('/admin/js/vendors.min.js') }}"></script>
   <script src="{{ asset('/assets/icons/feather-icons/feather.min.js') }}"></script>
   <script src="{{ asset('/assets/vendor_components/easypiechart/dist/jquery.easypiechart.js') }}"></script>
