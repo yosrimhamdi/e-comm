@@ -23,7 +23,7 @@
       data-widget="tree"
     >
 
-      <li>
+      <li class="active">
         <a href="index.html">
           <i data-feather="pie-chart"></i>
           <span>Dashboard</span>
