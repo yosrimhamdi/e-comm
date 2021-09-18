@@ -40,7 +40,11 @@ class ProfileController extends Controller {
 
     return redirect()
       ->to('/admin/profile')
-      ->with('success', 'Profile updated successfully.');
+      ->with([
+        'toastr' => true,
+        'status' => 'success',
+        'message' => 'Profile updated successfully.',
+      ]);
   }
 
   private function savePhoto($photo) {
