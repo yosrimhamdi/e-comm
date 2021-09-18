@@ -22,22 +22,18 @@ class ProfileController extends Controller {
       'email' => 'email',
     ]);
 
-    $updates = [
-      'name' => $request->name,
-      'email' => $request->email,
-    ];
-
     $photo = $request->file('photo');
 
     if ($photo) {
       $photoPath = $this->savePhoto($photo);
-
-      $updates['profile_photo_path'] = $photoPath;
     }
 
-    // dd($updates);
+    $admin = admin();
 
-    admin()->update($updates);
+    $admin->name = $request->name;
+    $admin->email = $request->email;
+    $admin->profile_photo_path = $photoPath ?? $admin->profile_photo_path;
+    $admin->save();
 
     return redirect()->route('admin.profile');
   }
