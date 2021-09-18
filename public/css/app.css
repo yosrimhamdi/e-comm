@@ -1227,6 +1227,9 @@ select {
 .ml-5 {
 	margin-left: 1.25rem;
 }
+.mr-auto {
+	margin-right: auto;
+}
 .block {
 	display: block;
 }
