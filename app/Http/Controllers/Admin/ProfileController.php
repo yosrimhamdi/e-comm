@@ -48,7 +48,7 @@ class ProfileController extends Controller {
     $photoPath = 'admin/photos/' . $name . $extension;
 
     Image::make($photo)
-      ->resize(300, null, function ($constraint) {
+      ->resize(500, null, function ($constraint) {
         $constraint->aspectRatio();
       })
       ->save($photoPath);
