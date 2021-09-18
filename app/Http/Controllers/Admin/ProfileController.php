@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Image;
-use App\Models\Admin;
+use File;
 
 class ProfileController extends Controller {
   public function index() {
@@ -23,12 +23,15 @@ class ProfileController extends Controller {
     ]);
 
     $photo = $request->file('photo');
+    $admin = admin();
 
     if ($photo) {
       $photoPath = $this->savePhoto($photo);
-    }
 
-    $admin = admin();
+      if ($admin->profile_photo_path != 'admin/photos/default.png') {
+        File::delete($admin->profile_photo_path);
+      }
+    }
 
     $admin->name = $request->name;
     $admin->email = $request->email;
