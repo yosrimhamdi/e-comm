@@ -39,6 +39,7 @@
                 required
               >
             </div>
+            <x-error input="name" />
           </div>
           <div class="form-group">
             <h5>Email Field <span class="text-danger">*</span></h5>
@@ -50,9 +51,7 @@
                 class="form-control"
                 required
               >
-              @error('email')
-                <div class="text-danger">{{ $message }}</div>
-              @enderror
+              <x-error input="email" />
             </div>
           </div>
           <div class="text-xs-right">
