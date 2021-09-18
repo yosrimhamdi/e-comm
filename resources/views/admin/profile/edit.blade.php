@@ -11,6 +11,7 @@
     <form
       action="{{ route('admin.profile.update') }}"
       method="POST"
+      enctype="multipart/form-data"
     >
       @csrf
       <div class="row">
@@ -23,7 +24,7 @@
             <div class="controls">
               <input
                 type="file"
-                name="file"
+                name="photo"
                 class="form-control"
               >
             </div>
