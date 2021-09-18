@@ -9,7 +9,7 @@
       >
     </div>
     <form
-      action="{{ route('admin.profile.update') }}"
+      action="{{ url('admin/profile') }}"
       method="POST"
       enctype="multipart/form-data"
     >

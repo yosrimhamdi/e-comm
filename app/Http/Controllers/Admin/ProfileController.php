@@ -35,7 +35,7 @@ class ProfileController extends Controller {
     $admin->profile_photo_path = $photoPath ?? $admin->profile_photo_path;
     $admin->save();
 
-    return redirect()->route('admin.profile');
+    return redirect()->to('/admin/profile');
   }
 
   private function savePhoto($photo) {

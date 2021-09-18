@@ -7,7 +7,7 @@
         <a
           type="button"
           class="btn btn-rounded btn-success mb-5"
-          href="{{ route('admin.profile.edit') }}"
+          href="{{ url('/admin/profile/edit') }}"
         >Edit Profile</a>
       </div>
       <h6 class="widget-user-desc">{{ admin()->email }}</h6>
