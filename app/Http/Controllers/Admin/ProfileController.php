@@ -35,6 +35,8 @@ class ProfileController extends Controller {
       $updates['profile_photo_path'] = $photoPath;
     }
 
+    // dd($updates);
+
     admin()->update($updates);
 
     return redirect()->route('admin.profile');
@@ -46,7 +48,9 @@ class ProfileController extends Controller {
     $photoPath = 'admin/photos/' . $name . $extension;
 
     Image::make($photo)
-      ->resize(300, 300)
+      ->resize(300, null, function ($constraint) {
+        $constraint->aspectRatio();
+      })
       ->save($photoPath);
 
     return $photoPath;
