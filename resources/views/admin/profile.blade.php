@@ -7,7 +7,7 @@
     <div class="widget-user-image">
       <img
         class="rounded-circle"
-        src="{{ asset('/admin/images/user3-128x128.jpg') }}"
+        src="{{ asset($admin->profile_photo_path) }}"
         alt="User Avatar"
       >
     </div>
