@@ -62,6 +62,7 @@
       </div>
     </div>
     <x-admin.footer />
+    <x-toastr />
   </div>
   <script src="{{ asset('/admin/js/vendors.min.js') }}"></script>
   <script src="{{ asset('/assets/icons/feather-icons/feather.min.js') }}"></script>
