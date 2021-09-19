@@ -35,11 +35,7 @@
               <a
                 class="dropdown-item"
                 href="#"
-              ><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
-              <a
-                class="dropdown-item"
-                href="#"
-              ><i class="ti-settings text-muted mr-2"></i> Settings</a>
+              ><i class="ti-settings text-muted mr-2"></i> Manage Password</a>
               <div class="dropdown-divider"></div>
               <form
                 method="POST"
@@ -50,6 +46,7 @@
                   type="submit"
                   class="dropdown-item"
                   href="#"
+                  style="color: #8a99b5; width: 100%"
                 ><i class="ti-lock text-muted mr-2"></i> Logout</button>
               </form>
             </li>
