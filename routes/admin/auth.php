@@ -9,6 +9,9 @@ Route::group(['as' => 'admin.'], function () {
     Route::get('/dashboard', [AuthController::class, 'dashBoardPage']);
 
     Route::post('/logout', [AuthController::class, 'destroy'])->name('logout');
+
+    Route::get('/password/change', [AuthController::class, 'changePasswordForm']);
+    Route::post('/password/change', [AuthController::class, 'changePassword']);
   });
 
   // should not be logged in: guest:admin

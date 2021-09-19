@@ -31,11 +31,11 @@
               <a
                 class="dropdown-item"
                 href="{{ url('/admin/profile') }}"
-              ><i class="ti-user text-muted mr-2"></i> Profile</a>
+              ><i class="ti-user text-muted mr-2"></i> Update Profile</a>
               <a
                 class="dropdown-item"
-                href="#"
-              ><i class="ti-settings text-muted mr-2"></i> Manage Password</a>
+                href="{{ url('/admin/password/change') }}"
+              ><i class="ti-settings text-muted mr-2"></i> Change Password</a>
               <div class="dropdown-divider"></div>
               <form
                 method="POST"
@@ -45,7 +45,6 @@
                 <button
                   type="submit"
                   class="dropdown-item"
-                  href="#"
                   style="color: #8a99b5; width: 100%"
                 ><i class="ti-lock text-muted mr-2"></i> Logout</button>
               </form>
