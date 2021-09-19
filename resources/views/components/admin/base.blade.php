@@ -63,7 +63,7 @@
     <x-toastr />
   </div>
   <script src="{{ asset('/admin/js/vendors.min.js') }}"></script>
-  <script src="{{ asset('/assets/icons/feather-icons/feather.min.js') }}"></script>
+  <script src="{{ asset('/admin/icons/feather-icons/feather.min.js') }}"></script>
   <script src="{{ asset('/admin/js/template.js') }}"></script>
 </body>
 
