@@ -19,16 +19,15 @@
     name="author"
     content=""
   >
+  <title>Sunny Admin - Dashboard</title>
   <link
     rel="icon"
     href="{{ asset('/admin/images/favicon.ico') }}"
   >
-  <title>Sunny Admin - Dashboard</title>
   <link
     rel="stylesheet"
     href="{{ asset('/admin/css/vendors_css.css') }}"
   >
-  <!-- Style-->
   <link
     rel="stylesheet"
     href="{{ asset('/admin/css/style.css') }}"
@@ -55,7 +54,6 @@
     <x-admin.side-bar />
     <div class="content-wrapper">
       <div class="container-full">
-        <!-- Main content -->
         <section class="content">
           <div class="row">{{ $slot }}</div>
         </section>
