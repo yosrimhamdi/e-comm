@@ -70,7 +70,7 @@
 
   <!-- Fonts -->
   <link
-    href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
+    href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
     rel='stylesheet'
     type='text/css'
   >
