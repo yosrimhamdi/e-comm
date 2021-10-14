@@ -17,4 +17,3 @@ open:
 both:
 	$(MAKE) git
 	$(MAKE) heroku
-	$(MAKE) open
