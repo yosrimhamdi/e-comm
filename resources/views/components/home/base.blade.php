@@ -29,43 +29,43 @@
   <!-- Bootstrap Core CSS -->
   <link
     rel="stylesheet"
-    href="home/css/bootstrap.min.css"
+    href="{{ asset('home/css/bootstrap.min.css') }}"
   >
 
   <!-- Customizable CSS -->
   <link
     rel="stylesheet"
-    href="home/css/main.css"
+    href="{{ asset('home/css/main.css') }}"
   >
   <link
     rel="stylesheet"
-    href="home/css/blue.css"
+    href="{{ asset('home/css/blue.css') }}"
   >
   <link
     rel="stylesheet"
-    href="home/css/owl.carousel.css"
+    href="{{ asset('home/css/owl.carousel.css') }}"
   >
   <link
     rel="stylesheet"
-    href="home/css/owl.transitions.css"
+    href="{{ asset('home/css/owl.transitions.css') }}"
   >
   <link
     rel="stylesheet"
-    href="home/css/animate.min.css"
+    href="{{ asset('home/css/animate.min.css') }}"
   >
   <link
     rel="stylesheet"
-    href="home/css/rateit.css"
+    href="{{ asset('home/css/rateit.css') }}"
   >
   <link
     rel="stylesheet"
-    href="home/css/bootstrap-select.min.css"
+    href="{{ asset('home/css/bootstrap-select.min.css') }}"
   >
 
   <!-- Icons/Glyphs -->
   <link
     rel="stylesheet"
-    href="home/css/font-awesome.css"
+    href="{{ asset('home/css/font-awesome.css') }}"
   >
 
   <!-- Fonts -->
@@ -109,21 +109,21 @@
   <!-- For demo purposes – can be removed on production : End -->
 
   <!-- JavaScripts placed at the end of the document so the pages load faster -->
-  <script src="home/js/jquery-1.11.1.min.js"></script>
-  <script src="home/js/bootstrap.min.js"></script>
-  <script src="home/js/bootstrap-hover-dropdown.min.js"></script>
-  <script src="home/js/owl.carousel.min.js"></script>
-  <script src="home/js/echo.min.js"></script>
-  <script src="home/js/jquery.easing-1.3.min.js"></script>
-  <script src="home/js/bootstrap-slider.min.js"></script>
-  <script src="home/js/jquery.rateit.min.js"></script>
+  <script src="{{ asset('home/js/jquery-1.11.1.min.js') }}"></script>
+  <script src="{{ asset('home/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('home/js/bootstrap-hover-dropdown.min.js') }}"></script>
+  <script src="{{ asset('home/js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('home/js/echo.min.js') }}"></script>
+  <script src="{{ asset('home/js/jquery.easing-1.3.min.js') }}"></script>
+  <script src="{{ asset('home/js/bootstrap-slider.min.js') }}"></script>
+  <script src="{{ asset('home/js/jquery.rateit.min.js') }}"></script>
   <script
     type="text/javascript"
-    src="home/js/lightbox.min.js"
+    src="{{ asset('home/js/lightbox.min.js') }}"
   ></script>
-  <script src="home/js/bootstrap-select.min.js"></script>
-  <script src="home/js/wow.min.js"></script>
-  <script src="home/js/scripts.js"></script>
+  <script src="{{ asset('home/js/bootstrap-select.min.js') }}"></script>
+  <script src="{{ asset('home/js/wow.min.js') }}"></script>
+  <script src="{{ asset('home/js/scripts.js') }}"></script>
 </body>
 
 </html>

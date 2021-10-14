@@ -1,21 +1,6 @@
-href="../images/favicon.ico"
-(href|src)="../images/(\S*)"
-$1="{{ url('/admin/images/$2') }}"
+\S*
 
-src="../assets/icons/feather-icons/feather.min.js"
-src="../assets/(\S*)"
-src="{{ url('/admin/$2') }}"
+href="home/css/bootstrap-select.min.css"
+(src|href)="(\S*)"
 
-
-src="js/vendors.min.js"
-src="js/(\S*)"
-src="{{  url('/public/js/$1') }}"
-
-href="css/vendors_css.css"
-
-href="css/(\S*)"
-href="{{  url('/admin/css/$1') }}"
-
-url(../images/gallery/creative/img-5.jpg)
-url\(../images/(\S*)\)
-url( {{ url('/admin/images/$1') }})
+$1="{{ asset('$2') }}"
