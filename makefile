@@ -5,11 +5,16 @@ git:
 
 env:
 	node updateRemoteEnv.js
+	$(MAKE) open
 
 heroku:
 	git push heroku master
+	$(MAKE) open
+
+open:
 	heroku open
 
 both:
 	$(MAKE) git
 	$(MAKE) heroku
+	$(MAKE) open
