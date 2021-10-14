@@ -1,6 +1,3 @@
-\S*
-
-href="home/css/bootstrap-select.min.css"
 (src|href)="(\S*)"
 
 $1="{{ asset('$2') }}"
