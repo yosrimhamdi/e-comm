@@ -26,12 +26,6 @@
 
   <title>Sunny Admin - Log in </title>
 
-  <!-- Vendors Style-->
-  <link
-    rel="stylesheet"
-    href="{{ asset('admin/css/vendors_css.css') }}"
-  >
-
   <!-- Style-->
   <link
     rel="stylesheet"
@@ -150,12 +144,6 @@
       </div>
     </div>
   </div>
-
-
-  <!-- Vendor JS -->
-  <script src="{{ asset('/admin/js/vendors.min.js') }}"></script>
-  <script src="{{ asset('/assets/icons/feather-icons/feather.min.js') }}"></script>
-
 </body>
 
 </html>
