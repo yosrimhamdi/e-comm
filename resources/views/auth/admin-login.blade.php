@@ -57,9 +57,6 @@
                 @csrf
                 <div class="form-group">
                   <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text bg-transparent text-white"><i class="ti-user"></i></span>
-                    </div>
                     <input
                       type="text"
                       class="form-control pl-15 bg-transparent text-white plc-white"
@@ -70,9 +67,6 @@
                 </div>
                 <div class="form-group">
                   <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text  bg-transparent text-white"><i class="ti-lock"></i></span>
-                    </div>
                     <input
                       type="password"
                       class="form-control pl-15 bg-transparent text-white plc-white"
