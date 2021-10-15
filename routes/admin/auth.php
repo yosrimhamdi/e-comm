@@ -3,14 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 
-Route::group(['as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
   // should be logged in: auth:admin
   Route::group(['middleware' => 'auth:admin'], function () {
     Route::get('/dashboard', [AuthController::class, 'dashBoardPage']);
 
     Route::post('/logout', [AuthController::class, 'destroy'])->name('logout');
 
-    Route::get('/password/change', [AuthController::class, 'changePasswordForm']);
+    Route::get('/password/change', [
+      AuthController::class,
+      'changePasswordForm',
+    ]);
     Route::post('/password/change', [AuthController::class, 'changePassword']);
   });
 
