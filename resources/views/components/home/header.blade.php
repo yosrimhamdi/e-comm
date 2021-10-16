@@ -58,7 +58,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
           <!-- ============================================================= LOGO ============================================================= -->
-          <div class="logo"> <a href="home.html"> <img
+          <div class="logo"> <a href="{{ url('/') }}"> <img
                 src="home/images/logo.png"
                 alt="logo"
               > </a> </div>
@@ -214,7 +214,7 @@
             <div class="nav-outer">
               <ul class="nav navbar-nav">
                 <li class="active dropdown yamm-fw"> <a
-                    href="home.html"
+                    href="{{ url('/') }}"
                     data-hover="dropdown"
                     class="dropdown-toggle"
                     data-toggle="dropdown"
@@ -402,7 +402,7 @@
                         <div class="row">
                           <div class="col-xs-12 col-menu">
                             <ul class="links">
-                              <li><a href="home.html">Home</a></li>
+                              <li><a href="{{ url('/') }}">Home</a></li>
                               <li><a href="category.html">Category</a></li>
                               <li><a href="detail.html">Detail</a></li>
                               <li><a href="shopping-cart.html">Shopping Cart Summary</a></li>
