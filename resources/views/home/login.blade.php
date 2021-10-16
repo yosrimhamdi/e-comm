@@ -17,10 +17,14 @@
                 class="twitter-sign-in"
               ><i class="fa fa-twitter"></i> Sign In with Twitter</a>
             </div>
+            <x-jet-validation-errors class="mb-4" />
             <form
               class="register-form outer-top-xs"
               role="form"
+              action="{{ route('login') }}"
+              method="POST"
             >
+              @csrf
               <div class="form-group">
                 <label
                   class="info-title"
@@ -28,6 +32,7 @@
                 >Email Address <span>*</span></label>
                 <input
                   type="email"
+                  name="email"
                   class="form-control unicase-form-control text-input"
                   id="exampleInputEmail1"
                 >
@@ -39,6 +44,7 @@
                 >Password <span>*</span></label>
                 <input
                   type="password"
+                  name="password"
                   class="form-control unicase-form-control text-input"
                   id="exampleInputPassword1"
                 >
@@ -47,7 +53,7 @@
                 <label>
                   <input
                     type="radio"
-                    name="optionsRadios"
+                    name="remember"
                     id="optionsRadios2"
                     value="option2"
                   >Remember me!
