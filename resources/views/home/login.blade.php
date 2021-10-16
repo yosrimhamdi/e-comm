@@ -52,11 +52,12 @@
               <div class="radio outer-xs">
                 <label>
                   <input
-                    type="radio"
+                    class="form-check-input"
+                    type="checkbox"
+                    id="flexCheckChecked"
                     name="remember"
-                    id="optionsRadios2"
-                    value="option2"
-                  >Remember me!
+                  >
+                  Remember me!
                 </label>
                 <a
                   href="#"
