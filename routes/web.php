@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Home\AuthController;
 use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
 
 Route::middleware(['auth:sanctum', 'verified'])
   ->get('/dashboard', function () {
