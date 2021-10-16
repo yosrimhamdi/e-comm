@@ -24,7 +24,7 @@
     name="robots"
     content="all"
   >
-  <title>Flipmart premium HTML5 & CSS3 Template</title>
+  <title>Easy Online Shop</title>
 
   <!-- Bootstrap Core CSS -->
   <link
