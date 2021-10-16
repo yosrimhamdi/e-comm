@@ -8,7 +8,7 @@ use Hash;
 
 class AuthController extends AuthenticatedSessionController {
   public function loginForm() {
-    return view('auth.admin-login');
+    return view('admin.login');
   }
 
   public function dashboardPage() {
