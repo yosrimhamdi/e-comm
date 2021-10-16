@@ -31,7 +31,7 @@
               <a
                 class="dropdown-item"
                 href="{{ url('/admin/profile') }}"
-              ><i class="ti-user text-muted mr-2"></i> Update Profile</a>
+              ><i class="ti-user text-muted mr-2"></i> Profile</a>
               <a
                 class="dropdown-item"
                 href="{{ url('/admin/password/change') }}"
