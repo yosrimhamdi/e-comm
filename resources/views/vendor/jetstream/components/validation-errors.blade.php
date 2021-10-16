@@ -1,5 +1,8 @@
 @if ($errors->any())
-  <div {{ $attributes }}>
+  <div
+    {{ $attributes }}
+    style="margin-top: 1em;"
+  >
     <ul
       style="font-size: 1.5rem; padding: 0.5em;"
       class="bg-danger"
