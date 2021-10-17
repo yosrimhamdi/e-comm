@@ -75,19 +75,24 @@
           <div class="col-md-6 col-sm-6 create-new-account">
             <h4 class="checkout-subtitle">Create a new account</h4>
             <p class="text title-tag-line">Create your new account.</p>
+            <x-jet-validation-errors class="mb-4" />
             <form
               class="register-form outer-top-xs"
-              role="form"
+              method="POST"
+              action="{{ route('register') }}"
             >
+              @csrf
               <div class="form-group">
                 <label
                   class="info-title"
                   for="exampleInputEmail2"
-                >Email Address <span>*</span></input>
+                  style="width: 100%; display: block"
+                >Email Address <span>*</span>
                   <input
                     type="email"
                     class="form-control unicase-form-control text-input"
                     id="exampleInputEmail2"
+                    name="email"
                   >
               </div>
               <div class="form-group">
@@ -96,20 +101,10 @@
                   for="exampleInputEmail1"
                 >Name <span>*</span></label>
                 <input
-                  type="email"
+                  type="text"
                   class="form-control unicase-form-control text-input"
                   id="exampleInputEmail1"
-                >
-              </div>
-              <div class="form-group">
-                <label
-                  class="info-title"
-                  for="exampleInputEmail1"
-                >Phone Number <span>*</span></label>
-                <input
-                  type="email"
-                  class="form-control unicase-form-control text-input"
-                  id="exampleInputEmail1"
+                  name="name"
                 >
               </div>
               <div class="form-group">
@@ -118,9 +113,10 @@
                   for="exampleInputEmail1"
                 >Password <span>*</span></label>
                 <input
-                  type="email"
+                  type="password"
                   class="form-control unicase-form-control text-input"
                   id="exampleInputEmail1"
+                  name="password"
                 >
               </div>
               <div class="form-group">
@@ -129,9 +125,10 @@
                   for="exampleInputEmail1"
                 >Confirm Password <span>*</span></label>
                 <input
-                  type="email"
+                  type="password"
                   class="form-control unicase-form-control text-input"
                   id="exampleInputEmail1"
+                  name="password_confirmation"
                 >
               </div>
               <button
