@@ -111,6 +111,18 @@
                 <label
                   class="info-title"
                   for="exampleInputEmail1"
+                >Phone Number <span>*</span></label>
+                <input
+                  type="string"
+                  class="form-control unicase-form-control text-input"
+                  id="exampleInputEmail1"
+                  name="phone"
+                >
+              </div>
+              <div class="form-group">
+                <label
+                  class="info-title"
+                  for="exampleInputEmail1"
                 >Password <span>*</span></label>
                 <input
                   type="password"
