@@ -9,7 +9,7 @@
         <form
           class="register-form outer-top-xs"
           role="form"
-          action="{{ route('login') }}"
+          action="{{ url('/login') }}"
           method="POST"
         >
 

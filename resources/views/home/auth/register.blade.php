@@ -9,7 +9,7 @@
         <form
           class="register-form outer-top-xs"
           method="POST"
-          action="{{ route('register') }}"
+          action="{{ url('/register') }}"
         >
           @csrf
           <div class="form-group">
