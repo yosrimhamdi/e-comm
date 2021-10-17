@@ -6,7 +6,6 @@
       <div class="header-top-inner">
         <div class="cnt-account">
           <ul class="list-unstyled">
-            <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
             <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
             <li><a href="#"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
             <li><a href="#"><i class="icon fa fa-check"></i>Checkout</a></li>
@@ -15,7 +14,7 @@
               <li><a href="{{ url('/register') }}"><i class="icon fa fa-lock"></i>Register</a></li>
             @endauth
             @auth('web')
-              <li><a href="{{ url('/dashboard') }}"><i class="icon fa fa-check"></i>Dashboard</a></li>
+              <li><a href="{{ url('/dashboard') }}"><i class="icon fa fa-user"></i>Dashboard</a></li>
             @endauth
           </ul>
         </div>
