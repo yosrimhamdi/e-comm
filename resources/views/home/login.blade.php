@@ -17,13 +17,13 @@
                 class="twitter-sign-in"
               ><i class="fa fa-twitter"></i> Sign In with Twitter</a>
             </div>
-            <x-jet-validation-errors class="mb-4" />
             <form
               class="register-form outer-top-xs"
               role="form"
               action="{{ route('login') }}"
               method="POST"
             >
+
               @csrf
               <div class="form-group">
                 <label
@@ -36,6 +36,7 @@
                   class="form-control unicase-form-control text-input"
                   id="exampleInputEmail1"
                 >
+                <x-error input="email" />
               </div>
               <div class="form-group">
                 <label
@@ -48,6 +49,7 @@
                   class="form-control unicase-form-control text-input"
                   id="exampleInputPassword1"
                 >
+                <x-error input="password" />
               </div>
               <div class="radio outer-xs">
                 <label>
@@ -75,7 +77,6 @@
           <div class="col-md-6 col-sm-6 create-new-account">
             <h4 class="checkout-subtitle">Create a new account</h4>
             <p class="text title-tag-line">Create your new account.</p>
-            <x-jet-validation-errors class="mb-4" />
             <form
               class="register-form outer-top-xs"
               method="POST"
@@ -94,6 +95,7 @@
                     id="exampleInputEmail2"
                     name="email"
                   >
+                  <x-error input="email" />
               </div>
               <div class="form-group">
                 <label
@@ -106,6 +108,7 @@
                   id="exampleInputEmail1"
                   name="name"
                 >
+                <x-error input="name" />
               </div>
               <div class="form-group">
                 <label
@@ -118,6 +121,7 @@
                   id="exampleInputEmail1"
                   name="phone"
                 >
+                <x-error input="phone" />
               </div>
               <div class="form-group">
                 <label
@@ -130,6 +134,7 @@
                   id="exampleInputEmail1"
                   name="password"
                 >
+                <x-error input="password" />
               </div>
               <div class="form-group">
                 <label
@@ -142,6 +147,7 @@
                   id="exampleInputEmail1"
                   name="password_confirmation"
                 >
+                <x-error input="password_confirmation" />
               </div>
               <button
                 type="submit"
