@@ -97,6 +97,7 @@
   >
     {{ $slot }}
     <!-- /.container -->
+    <x-home.brand-carousel />
   </div>
   <!-- /#top-banner-and-menu -->
 
