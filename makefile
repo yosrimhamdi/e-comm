@@ -17,3 +17,6 @@ open:
 both:
 	$(MAKE) git
 	$(MAKE) heroku
+
+routeList:
+	php artisan r:l --path="$p" --columns="method,name,URI,action"

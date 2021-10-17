@@ -9,7 +9,7 @@
         <form
           class="register-form outer-top-xs"
           role="form"
-          action="{{ url('/login') }}"
+          action="{{ route('login') }}"
           method="POST"
         >
 
@@ -50,7 +50,7 @@
               Remember me!
             </label>
             <a
-              href="{{ url('/forgot-password') }}"
+              href="{{ route('password.request') }}"
               class="forgot-password pull-right"
             >Forgot your Password?</a>
           </div>
