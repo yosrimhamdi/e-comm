@@ -7,10 +7,14 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller {
   public function loginForm() {
-    return view('home.login');
+    return view('home.auth.login');
   }
 
   public function registerForm() {
-    return view('home.register');
+    return view('home.auth.register');
+  }
+
+  public function forgotPasswordForm() {
+    return view('home.auth.forgot-password');
   }
 }
