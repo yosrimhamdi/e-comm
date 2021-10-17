@@ -1,8 +1,17 @@
 <?php
+
+use App\Http\Controllers\Home\AuthController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/login', 'home.auth.login')->name('login');
-Route::view('/register', 'home.auth.register')->name('register');
-Route::view('/forgot-password', ['home.auth.forgot-password'])->name(
-  'password.request'
+Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
+Route::get('/register', [AuthController::class, 'registerForm'])->name(
+  'register'
 );
+Route::get('/forgot-password', [
+  AuthController::class,
+  'forgotPasswordForm',
+])->name('password.request');
+Route::get('/reset-password', [
+  AuthController::class,
+  'resetPasswordForm',
+])->name('password.reset');
