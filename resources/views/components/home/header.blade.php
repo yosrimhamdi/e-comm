@@ -10,8 +10,13 @@
             <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
             <li><a href="#"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
             <li><a href="#"><i class="icon fa fa-check"></i>Checkout</a></li>
-            <li><a href="{{ url('/login') }}"><i class="icon fa fa-lock"></i>Login</a></li>
-            <li><a href="{{ url('/register') }}"><i class="icon fa fa-lock"></i>Register</a></li>
+            @guest('web')
+              <li><a href="{{ url('/login') }}"><i class="icon fa fa-lock"></i>Login</a></li>
+              <li><a href="{{ url('/register') }}"><i class="icon fa fa-lock"></i>Register</a></li>
+            @endauth
+            @auth('web')
+              <li><a href="{{ url('/dashboard') }}"><i class="icon fa fa-check"></i>Dashboard</a></li>
+            @endauth
           </ul>
         </div>
         <!-- /.cnt-account -->
