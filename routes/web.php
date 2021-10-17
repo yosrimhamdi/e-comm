@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
+Route::get('/register', [AuthController::class, 'registerForm'])->name(
+  'register'
+);
 
 Route::middleware(['auth:sanctum', 'verified'])
   ->get('/dashboard', function () {
