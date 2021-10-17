@@ -50,7 +50,7 @@
               Remember me!
             </label>
             <a
-              href="{{ route('password.request') }}"
+              href="{{ url('/forgot-password') }}"
               class="forgot-password pull-right"
             >Forgot your Password?</a>
           </div>
