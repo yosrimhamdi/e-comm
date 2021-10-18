@@ -200,23 +200,23 @@
         <div class="clearfix payment-methods">
           <ul>
             <li><img
-                src="home/images/payments/1.png"
+                src="{{ asset('home/images/payments/1.png') }}"
                 alt=""
               ></li>
             <li><img
-                src="home/images/payments/2.png"
+                src="{{ asset('home/images/payments/2.png') }}"
                 alt=""
               ></li>
             <li><img
-                src="home/images/payments/3.png"
+                src="{{ asset('home/images/payments/3.png') }}"
                 alt=""
               ></li>
             <li><img
-                src="home/images/payments/4.png"
+                src="{{ asset('home/images/payments/4.png') }}"
                 alt=""
               ></li>
             <li><img
-                src="home/images/payments/5.png"
+                src="{{ asset('home/images/payments/5.png') }}"
                 alt=""
               ></li>
           </ul>

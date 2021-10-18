@@ -63,6 +63,7 @@
               type="file"
               class="form-control unicase-form-control text-input"
               name="photo"
+              id="file-input"
             >
             <x-error input="photo" />
           </div>
