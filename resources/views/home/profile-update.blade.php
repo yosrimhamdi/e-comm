@@ -9,6 +9,7 @@
         <form
           class="register-form outer-top-xs"
           method="POST"
+          enctype="multipart/form-data"
           action="{{ route('user.profile.update') }}"
         >
           @csrf
@@ -46,12 +47,24 @@
               for="exampleInputEmail1"
             >Phone Number</label>
             <input
-              type="string"
+              type="text"
               class="form-control unicase-form-control text-input"
               name="phone"
               value="{{ user()->phone }}"
             >
             <x-error input="phone" />
+          </div>
+          <div class="form-group">
+            <label
+              class="info-title"
+              for="exampleInputEmail1"
+            >Photo</label>
+            <input
+              type="file"
+              class="form-control unicase-form-control text-input"
+              name="photo"
+            >
+            <x-error input="photo" />
           </div>
           <button
             type="submit"

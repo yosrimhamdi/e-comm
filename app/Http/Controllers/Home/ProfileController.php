@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Traits\UploadImage;
 
 class ProfileController extends Controller {
+  use UploadImage;
+
   public function getProfileUpdateForm() {
     return view('home.profile-update');
   }
@@ -18,6 +21,12 @@ class ProfileController extends Controller {
     ]);
 
     $user = user();
+    $photo = $request->file('photo');
+
+    if ($photo) {
+      $user->profile_photo_path = $this->uploadImage($photo, 'users/photos/');
+    }
+
     $user->email = $request->email;
     $user->name = $request->name;
     $user->phone = $request->phone;

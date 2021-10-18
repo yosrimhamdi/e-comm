@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Image;
 use File;
+use App\Http\Traits\UploadImage;
 
 class ProfileController extends Controller {
+  use UploadImage;
+
   public function index() {
     return view('admin.profile.index');
   }
@@ -26,7 +28,7 @@ class ProfileController extends Controller {
     $admin = admin();
 
     if ($photo) {
-      $photoPath = $this->savePhoto($photo);
+      $photoPath = $this->uploadImage($photo, 'admin/photos/');
 
       if ($admin->profile_photo_path != 'admin/photos/default.png') {
         File::delete($admin->profile_photo_path);
@@ -41,17 +43,5 @@ class ProfileController extends Controller {
     return redirect()
       ->to('/admin/profile')
       ->with(toastr('success', 'Profile updated successfully'));
-  }
-
-  private function savePhoto($photo) {
-    $name = hexdec(uniqid());
-    $extension = '.' . strtolower($photo->getClientOriginalExtension());
-    $photoPath = 'admin/photos/' . $name . $extension;
-
-    Image::make($photo)
-      ->crop(300, 300, null)
-      ->save($photoPath);
-
-    return $photoPath;
   }
 }
