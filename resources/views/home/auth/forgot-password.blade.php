@@ -23,7 +23,7 @@
         <form
           class="register-form outer-top-xs"
           role="form"
-          action="{{ route('password.email') }}"
+          action="{{ route('user.password.email') }}"
           method="POST"
         >
 

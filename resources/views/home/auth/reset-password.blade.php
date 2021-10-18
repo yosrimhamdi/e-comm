@@ -10,7 +10,7 @@
         <form
           class="register-form outer-top-xs"
           role="form"
-          action="{{ route('password.update') }}"
+          action="{{ route('user.password.update') }}"
           method="POST"
         >
 
