@@ -1,11 +1,11 @@
-<x-home.base>
+<x-dashboard-base>
   <div class="body-content">
     <div class="container">
       <div
         class="sign-in-page"
-        style="width: 50%; margin: 0 auto;"
+        style="width: 50%;"
       >
-        <h4 class="checkout-subtitle">Update Profile</h4>
+        <h4 class="">Update Profile</h4>
         <form
           class="register-form outer-top-xs"
           method="POST"
@@ -58,7 +58,7 @@
             class="btn-upper btn btn-primary checkout-page-button"
           >Update Profile</button>
         </form>
-      </div><!-- /.sigin-in-->
-    </div><!-- /.container -->
+      </div>
+    </div>
   </div>
-</x-home.base>
+</x-dashboard-base>
