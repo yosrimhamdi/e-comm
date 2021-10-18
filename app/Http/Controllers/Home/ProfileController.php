@@ -24,7 +24,7 @@ class ProfileController extends Controller {
     $user->save();
 
     return redirect()
-      ->route('dashboard')
+      ->back()
       ->with(toastr('success', 'Profile Updated'));
   }
 }
