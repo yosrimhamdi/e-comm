@@ -25,6 +25,10 @@ class ProfileController extends Controller {
 
     if ($photo) {
       $user->profile_photo_path = $this->uploadImage($photo, 'users/photos/');
+
+      if ($user->profile_photo_path != 'storage/profile-photos/default.png') {
+        File::delete($user->profile_photo_path);
+      }
     }
 
     $user->email = $request->email;
