@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Home;
+use File;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -24,11 +25,11 @@ class ProfileController extends Controller {
     $photo = $request->file('photo');
 
     if ($photo) {
-      $user->profile_photo_path = $this->uploadImage($photo, 'users/photos/');
-
       if ($user->profile_photo_path != 'storage/profile-photos/default.png') {
         File::delete($user->profile_photo_path);
       }
+
+      $user->profile_photo_path = $this->uploadImage($photo, 'users/photos/');
     }
 
     $user->email = $request->email;
