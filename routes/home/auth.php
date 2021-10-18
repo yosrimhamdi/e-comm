@@ -20,6 +20,6 @@ Route::group(['middleware' => 'guest:web'], function () {
   ])->name('password.reset');
 });
 
-Route::get('/logout', [AuthController::class, 'logout'])
-  ->name('logout')
-  ->middleware('auth:web');
+Route::group(['middleware' => 'auth:web'], function () {
+  Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
