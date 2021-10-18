@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-2">
           <img
-            src="{{ Auth::user()->profile_photo_path }}"
+            src="{{ asset(Auth::user()->profile_photo_path) }}"
             alt="Logged in user photo"
             style="border-radius: 50%; height: 100%; width: 100%; margin-bottom: 1em;"
             class="card-img-top"

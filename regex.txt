@@ -1,5 +1,7 @@
 (src|href)="(\S*)"
 $1="{{ asset('$2') }}"
 
+(src|href|data-echo)="(\S*[^#|html])"
+
 url\((\S*)\)
 url({{ asset('$1') }})

@@ -12,7 +12,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand1.png"
+              data-echo="{{ asset('home/images/brands/brand1.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -22,7 +22,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand2.png"
+              data-echo="{{ asset('home/images/brands/brand2.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -32,7 +32,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand3.png"
+              data-echo="{{ asset('home/images/brands/brand3.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -42,7 +42,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand4.png"
+              data-echo="{{ asset('home/images/brands/brand4.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -52,7 +52,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand5.png"
+              data-echo="{{ asset('home/images/brands/brand5.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -62,7 +62,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand6.png"
+              data-echo="{{ asset('home/images/brands/brand6.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -72,7 +72,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand2.png"
+              data-echo="{{ asset('home/images/brands/brand2.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -82,7 +82,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand4.png"
+              data-echo="{{ asset('home/images/brands/brand4.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -92,7 +92,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand1.png"
+              data-echo="{{ asset('home/images/brands/brand1.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>
@@ -102,7 +102,7 @@
             href="{{ asset('#') }}"
             class="image"
           > <img
-              data-echo="home/images/brands/brand5.png"
+              data-echo="{{ asset('home/images/brands/brand5.png') }}"
               src="{{ asset('home/images/blank.gif') }}"
               alt=""
             > </a> </div>

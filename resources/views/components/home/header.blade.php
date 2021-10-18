@@ -64,7 +64,7 @@
         <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
           <!-- ============================================================= LOGO ============================================================= -->
           <div class="logo"> <a href="{{ url('/') }}"> <img
-                src="home/images/logo.png"
+                src="{{ asset('home/images/logo.png') }}"
                 alt="logo"
               > </a> </div>
           <!-- /.logo -->
@@ -150,7 +150,7 @@
                   <div class="row">
                     <div class="col-xs-4">
                       <div class="image"> <a href="detail.html"><img
-                            src="home/images/cart.jpg"
+                            src="{{ asset('home/images/cart.jpg') }}"
                             alt=""
                           ></a> </div>
                     </div>
@@ -292,7 +292,7 @@
 
                           <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image"> <img
                               class="img-responsive"
-                              src="home/images/banners/top-menu-banner.jpg"
+                              src="{{ asset('home/images/banners/top-menu-banner.jpg') }}"
                               alt=""
                             > </div>
                           <!-- /.yamm-content -->
@@ -379,7 +379,7 @@
                           </div>
                           <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner"> <a href="#"><img
                                 alt=""
-                                src="home/images/banners/banner-side.png"
+                                src="{{ asset('home/images/banners/banner-side.png') }}"
                               ></a> </div>
                         </div>
                         <!-- /.row -->
