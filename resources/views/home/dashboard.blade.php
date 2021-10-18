@@ -23,7 +23,7 @@
               class="btn btn-primary btn-sm btn-block"
             >Change Password</a>
             <a
-              href=""
+              href="{{ route('user.logout') }}"
               class="btn btn-danger btn-sm btn-block"
             >Logout</a>
           </div>

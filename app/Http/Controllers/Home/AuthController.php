@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
 
 class AuthController extends Controller {
   public function loginForm() {
@@ -20,5 +21,11 @@ class AuthController extends Controller {
 
   public function resetPasswordForm(Request $request) {
     return view('home.auth.reset-password', compact('request'));
+  }
+
+  public function logout() {
+    Auth::guard('web')->logout();
+
+    return redirect('/login');
   }
 }

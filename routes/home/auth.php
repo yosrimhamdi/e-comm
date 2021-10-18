@@ -18,3 +18,5 @@ Route::get('/reset-password/{token}', [
   AuthController::class,
   'resetPasswordForm',
 ])->name('password.reset');
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('user.logout');
