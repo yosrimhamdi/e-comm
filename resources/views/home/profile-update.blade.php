@@ -10,7 +10,7 @@
           class="register-form outer-top-xs"
           method="POST"
           enctype="multipart/form-data"
-          action="{{ route('user.profile.update') }}"
+          action="{{ route('profile.update') }}"
         >
           @csrf
           <div class="form-group">

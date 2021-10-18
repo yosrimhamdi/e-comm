@@ -3,9 +3,8 @@
 use App\Http\Controllers\Home\AuthController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['as' => 'user.'], function () {
+Route::group(['middleware' => 'guest:web'], function () {
   Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
-
   Route::get('/register', [AuthController::class, 'registerForm'])->name(
     'register'
   );
@@ -19,6 +18,8 @@ Route::group(['as' => 'user.'], function () {
     AuthController::class,
     'resetPasswordForm',
   ])->name('password.reset');
-
-  Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
+
+Route::get('/logout', [AuthController::class, 'logout'])
+  ->name('logout')
+  ->middleware('auth:web');
