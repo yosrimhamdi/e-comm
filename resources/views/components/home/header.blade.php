@@ -12,9 +12,15 @@
             @guest('web')
               <li><a href="{{ url('/login') }}"><i class="icon fa fa-lock"></i>Login</a></li>
               <li><a href="{{ url('/register') }}"><i class="icon fa fa-lock"></i>Register</a></li>
-            @endauth
+            @endguest
             @auth('web')
               <li><a href="{{ url('/dashboard') }}"><i class="icon fa fa-user"></i>Dashboard</a></li>
+            @endauth
+            @guest('admin')
+              <li><a href="{{ url('/admin/login') }}"><i class="icon fa fa-lock"></i>Admin Login</a></li>
+            @endguest
+            @auth('admin')
+              <li><a href="{{ url('/admin/dashboard') }}"><i class="icon fa fa-user"></i>Admin Dashboard</a></li>
             @endauth
           </ul>
         </div>
