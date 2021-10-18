@@ -15,7 +15,7 @@
               class="btn btn-primary btn-sm btn-block"
             >Home</a>
             <a
-              href=""
+              href="{{ route('user.profile.update.form') }}"
               class="btn btn-primary btn-sm btn-block"
             >Profile Update</a>
             <a
