@@ -20,7 +20,7 @@
               class="btn btn-primary btn-sm btn-block"
             >Profile Update</a>
             <a
-              href=""
+              href="{{ route('password.change.form') }}"
               class="btn btn-primary btn-sm btn-block"
             >Change Password</a>
             <a

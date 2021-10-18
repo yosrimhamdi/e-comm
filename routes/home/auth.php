@@ -22,4 +22,12 @@ Route::group(['middleware' => 'guest:web'], function () {
 
 Route::group(['middleware' => 'auth:web'], function () {
   Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+  Route::get('/password/change', [
+    AuthController::class,
+    'changePasswordForm',
+  ])->name('password.change.form');
+  Route::post('/password/change', [
+    AuthController::class,
+    'changePassword',
+  ])->name('password.change');
 });
