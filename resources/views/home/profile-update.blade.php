@@ -64,6 +64,7 @@
               class="form-control unicase-form-control text-input"
               name="photo"
               id="file-input"
+              accept="image/*"
             >
             <x-error input="photo" />
           </div>
@@ -75,4 +76,16 @@
       </div>
     </div>
   </div>
+  <script>
+    const fileInput = document.getElementById('file-input');
+    const userPhoto = document.getElementById('user-photo');
+
+    fileInput.onchange = () => {
+      const reader = new FileReader();
+      reader.readAsDataURL(fileInput.files[0]);
+      reader.addEventListener('load', e => {
+        userPhoto.src = reader.result;
+      });
+    }
+  </script>
 </x-dashboard-base>

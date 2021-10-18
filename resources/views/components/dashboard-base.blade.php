@@ -6,8 +6,9 @@
           <img
             src="{{ asset(Auth::user()->profile_photo_path) }}"
             alt="Logged in user photo"
-            style="border-radius: 50%; height: 100%; width: 100%; margin-bottom: 1em;"
+            style="border-radius: 50%; object-fit: cover; width: 100%; aspect-ratio: 1; margin-bottom: 1em;"
             class="card-img-top"
+            id="user-photo"
           >
           <div class="list-group list-group-flash">
             <a
