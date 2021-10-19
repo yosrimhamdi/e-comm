@@ -14,4 +14,4 @@
 @import '../icons/cryptocoins-master/cryptocoins.css';
 @import '../icons/weather-icons/css/weather-icons.min.css';
 @import '../icons/iconsmind/style.css';
-@import '../vendor_components/animate/animate.css';
+@import './animate.css';
