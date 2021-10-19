@@ -1,4 +1,4 @@
-<x-dashboard-base>
+<x-home.dashboard-base>
   <div class="body-content">
     <div class="container">
       <div
@@ -80,4 +80,4 @@
     fileInputId="file-input"
     previewLocationId="user-photo"
   />
-</x-dashboard-base>
+</x-home.dashboard-base>

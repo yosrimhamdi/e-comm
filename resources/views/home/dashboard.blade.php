@@ -1,4 +1,4 @@
-<x-dashboard-base>
+<x-home.dashboard-base>
   <div class="card">
     <h3 class="text-center">
       <span class="text-danger">
@@ -6,4 +6,4 @@
       </span>
     </h3>
   </div>
-</x-dashboard-base>
+  </x-dashboard-base>

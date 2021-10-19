@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Home;
 
 use Illuminate\View\Component;
 
@@ -23,6 +23,6 @@ class DashboardBase extends Component
      */
     public function render()
     {
-        return view('components.dashboard-base');
+        return view('components.home.dashboard-base');
     }
 }

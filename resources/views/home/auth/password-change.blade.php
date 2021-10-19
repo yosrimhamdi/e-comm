@@ -1,4 +1,4 @@
-<x-dashboard-base>
+<x-home.dashboard-base>
   <div class="body-content">
     <div class="container">
       <div
@@ -56,4 +56,4 @@
       </div>
     </div>
   </div>
-</x-dashboard-base>
+</x-home.dashboard-base>
