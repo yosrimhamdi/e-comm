@@ -39,7 +39,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href=""><i class="ti-more"></i>All Brands</a></li>
+          <li><a href="{{ url('/admin/brands') }}"><i class="ti-more"></i>All Brands</a></li>
         </ul>
       </li>
 
