@@ -45,7 +45,7 @@
     <div class="content-wrapper">
       <div class="container-full">
         <section class="content">
-          <div class="row">{{ $slot }}</div>
+          {{ $slot }}
         </section>
       </div>
     </div>
