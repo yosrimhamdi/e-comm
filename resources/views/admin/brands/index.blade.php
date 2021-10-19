@@ -77,8 +77,18 @@
                     <td><img
                         src="{{ $brand->imageURL }}"
                         alt="{{ $brand->name_en }} brand"
+                        style="width: 70px; aspect-ratio:1; object-fit:cover;"
                       /></td>
-                    <td>action</td>
+                    <td>
+                      <a
+                        href=""
+                        class="btn btn-info"
+                      >Edit</a>
+                      <a
+                        href=""
+                        class="btn btn-danger"
+                      >Delete</a>
+                    </td>
                   </tr>
 
                 @endforeach
