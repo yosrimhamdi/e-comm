@@ -9,3 +9,8 @@ Route::middleware(['auth:sanctum', 'verified'])
     return view('home.dashboard');
   })
   ->name('dashboard');
+
+require_once __DIR__ . '/home/auth.php';
+require_once __DIR__ . '/home/profile.php';
+require_once __DIR__ . '/admin/auth.php';
+require_once __DIR__ . '/admin/profile.php';
