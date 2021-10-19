@@ -55,6 +55,8 @@
   <script src="{{ asset('/admin/js/vendors.min.js') }}"></script>
   <script src="{{ asset('/admin/icons/feather-icons/feather.min.js') }}"></script>
   <script src="{{ asset('/admin/js/template.js') }}"></script>
+  <script src="{{ asset('/admin/js/datatable.js') }}"></script>
+  <script src="{{ asset('/admin/js/pages/data-table.js') }}"></script>
 </body>
 
 </html>
