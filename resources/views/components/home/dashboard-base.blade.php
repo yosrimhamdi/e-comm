@@ -12,7 +12,7 @@
           >
           <div class="list-group list-group-flash">
             <a
-              href="{{ url('/') }}"
+              href="{{ route('home') }}"
               class="btn btn-primary btn-sm btn-block"
             >Home</a>
             <a
