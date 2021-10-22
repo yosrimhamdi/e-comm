@@ -37,7 +37,7 @@ class BrandController extends Controller {
       $brand->name_en = $request->name_en;
       $brand->name_fr = $request->name_fr;
       $brand->imageURL = $imagePath;
-      $brand->slug = str_replace(' ', '-', $request->name_en);
+      $brand->slug = strtolower(str_replace(' ', '-', $request->name_en));
       $brand->save();
 
       return redirect()
