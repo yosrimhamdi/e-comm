@@ -292,4 +292,18 @@
 
     </ul>
   </section>
+  <script>
+    const menus = document.querySelectorAll('li.treeview');
+
+    menus.forEach(menu => {
+      menu.onclick = () => {
+        const prevActiveMenu = document.querySelector('.active');
+
+        setTimeout(() => {
+          prevActiveMenu.classList.remove('active');
+          menu.classList.toggle('active');
+        }, 0);
+      }
+    });
+  </script>
 </aside>
