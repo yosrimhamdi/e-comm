@@ -34,10 +34,10 @@ class BrandController extends Controller {
       $imagePath = $this->uploadImage($brandImage, 'images/brands/');
 
       $brand = new Brand();
-      $brand->name_en = $request->name_en;
-      $brand->name_fr = $request->name_fr;
+      $brand->name_en = trim($request->name_en);
+      $brand->name_fr = trim($request->name_fr);
       $brand->imageURL = $imagePath;
-      $brand->slug = strtolower(str_replace(' ', '-', $request->name_en));
+      $brand->slug = strtolower(str_replace(' ', '-', trim($request->name_en)));
       $brand->save();
 
       return redirect()

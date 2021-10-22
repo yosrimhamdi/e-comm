@@ -29,7 +29,7 @@ class ProfileController extends Controller {
         File::delete($user->profile_photo_path);
       }
 
-      $user->profile_photo_path = $this->uploadImage($photo, 'users/photos/');
+      $user->profile_photo_path = $this->uploadPhoto($photo, 'users/photos/');
     }
 
     $user->email = $request->email;
