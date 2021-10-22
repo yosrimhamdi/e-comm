@@ -39,7 +39,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ url('/admin/brands') }}"><i class="ti-more"></i>All Brands</a></li>
+          <li><a href="{{ route('brands.index') }}"><i class="ti-more"></i>All Brands</a></li>
+          <li><a href="{{ route('brands.create') }}"><i class="ti-more"></i>Add New Brand</a></li>
         </ul>
       </li>
 

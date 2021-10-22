@@ -9,7 +9,7 @@
   </style>
   <div class="box">
     <div class="box-header with-border">
-      <h3 class="box-title">Brad Lis</h3>
+      <h3 class="box-title">Brand List</h3>
     </div>
     <!-- /.box-header -->
     <div class="box-body">
@@ -75,7 +75,7 @@
                     <td>{{ $brand->name_en }}</td>
                     <td>{{ $brand->name_fr }}</td>
                     <td><img
-                        src="{{ $brand->imageURL }}"
+                        src="{{ asset($brand->imageURL) }}"
                         alt="{{ $brand->name_en }} brand"
                         style="width: 70px; aspect-ratio:1; object-fit:cover;"
                       /></td>

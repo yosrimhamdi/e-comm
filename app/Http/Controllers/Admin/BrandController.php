@@ -5,36 +5,40 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Brand;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Traits\UploadImage;
 
 class BrandController extends Controller {
-  /**
-   * Display a listing of the resource.
-   *
-   * @return \Illuminate\Http\Response
-   */
+  use UploadImage;
+
   public function index() {
     $brands = Brand::all();
 
     return view('admin.brands.index', compact('brands'));
   }
 
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return \Illuminate\Http\Response
-   */
   public function create() {
-    //
+    return view('admin.brands.create');
   }
 
-  /**
-   * Store a newly created resource in storage.
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @return \Illuminate\Http\Response
-   */
   public function store(Request $request) {
-    //
+    $request->validate([
+      'name_en' => 'required',
+      'name_fr' => 'required',
+      'image' => 'required',
+    ]);
+
+    $brandImage = $request->file('image');
+
+    $brand = new Brand();
+    $brand->name_en = $request->name_en;
+    $brand->name_fr = $request->name_fr;
+    $brand->imageURL = $this->uploadImage($brandImage, 'images/brands');
+    $brand->slug = str_replace(' ', '-', $request->name_en);
+    $brand->save();
+
+    return redirect()
+      ->route('brands.index')
+      ->with(toastr('success', 'Created a new brand.'));
   }
 
   /**

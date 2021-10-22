@@ -5,16 +5,16 @@ use Image;
 use File;
 
 trait UploadImage {
-  private function uploadImage($photo, $path) {
+  private function uploadImage($image, $path) {
     if (!File::exists($path)) {
       File::makeDirectory($path, 0777, true);
     }
 
     $name = hexdec(uniqid());
-    $extension = '.' . strtolower($photo->getClientOriginalExtension());
+    $extension = '.' . strtolower($image->getClientOriginalExtension());
     $photoPath = $path . $name . $extension;
 
-    Image::make($photo)
+    Image::make($image)
       ->crop(300, 300, null)
       ->save($photoPath);
 
