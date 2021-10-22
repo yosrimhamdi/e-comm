@@ -21,8 +21,8 @@
             aria-describedby="emailHelp"
             name="name_en"
           >
+          <x-error input="name_en" />
         </div>
-        <x-error input="name_en" />
         <div class="form-group">
           <label for="exampleInputPassword1">French Name</label>
           <input

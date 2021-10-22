@@ -6,6 +6,8 @@ use App\Models\Brand;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Traits\UploadImage;
+use Illuminate\Database\QueryException;
+use File;
 
 class BrandController extends Controller {
   use UploadImage;
@@ -27,18 +29,33 @@ class BrandController extends Controller {
       'image' => 'required',
     ]);
 
-    $brandImage = $request->file('image');
+    try {
+      $brandImage = $request->file('image');
+      $imagePath = $this->uploadImage($brandImage, 'images/brands/');
 
-    $brand = new Brand();
-    $brand->name_en = $request->name_en;
-    $brand->name_fr = $request->name_fr;
-    $brand->imageURL = $this->uploadImage($brandImage, 'images/brands');
-    $brand->slug = str_replace(' ', '-', $request->name_en);
-    $brand->save();
+      $brand = new Brand();
+      $brand->name_en = $request->name_en;
+      $brand->name_fr = $request->name_fr;
+      $brand->imageURL = $imagePath;
+      $brand->slug = str_replace(' ', '-', $request->name_en);
+      $brand->save();
 
-    return redirect()
-      ->route('brands.index')
-      ->with(toastr('success', 'Created a new brand.'));
+      return redirect()
+        ->route('brands.index')
+        ->with(toastr('success', 'Created a new brand.'));
+    } catch (QueryException) {
+      File::delete($imagePath);
+
+      return redirect()
+        ->back()
+        ->withErrors(['name_en' => 'duplicate brand name']);
+    } catch (\Exception) {
+      File::delete($imagePath);
+
+      return redirect()
+        ->back()
+        ->with(toastr('error', 'Something went wrong. try again.'));
+    }
   }
 
   /**
