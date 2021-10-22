@@ -2,4 +2,4 @@
 
 use App\Http\Controllers\Admin\BrandController;
 
-Route::resource('/admin/brands', BrandController::class);
+Route::resource('/admin/brands', BrandController::class)->except('show');
