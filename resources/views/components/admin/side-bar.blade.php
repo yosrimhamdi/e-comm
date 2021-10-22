@@ -23,14 +23,14 @@
       data-widget="tree"
     >
 
-      <li class="active">
+      <x-admin.side-bar-menu-group end-point="admin/dashboard">
         <a href="{{ url('/admin/dashboard') }}">
           <i data-feather="pie-chart"></i>
           <span>Dashboard</span>
         </a>
-      </li>
+      </x-admin.side-bar-menu-group>
 
-      <li class="treeview">
+      <x-admin.side-bar-menu-group end-point="brands">
         <a href="#">
           <i data-feather="message-circle"></i>
           <span>Brands</span>
@@ -42,7 +42,7 @@
           <li><a href="{{ route('brands.index') }}"><i class="ti-more"></i>All Brands</a></li>
           <li><a href="{{ route('brands.create') }}"><i class="ti-more"></i>Add New Brand</a></li>
         </ul>
-      </li>
+      </x-admin.side-bar-menu-group>
 
       <li class="treeview">
         <a href="#">
