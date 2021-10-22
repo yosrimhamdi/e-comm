@@ -84,10 +84,19 @@
                         href=""
                         class="btn btn-info"
                       >Edit</a>
-                      <a
-                        href=""
-                        class="btn btn-danger"
-                      >Delete</a>
+                      <form
+                        style="display: inline-block"
+                        method="POST"
+                        action="{{ url('/admin/brands/' . $brand->id) }}"
+                      >
+                        @method('DELETE')
+                        @csrf
+                        <button
+                          type="submit"
+                          class="btn btn-danger"
+                        >Delete</button>
+
+                      </form>
                     </td>
                   </tr>
 

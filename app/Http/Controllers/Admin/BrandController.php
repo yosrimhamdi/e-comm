@@ -40,9 +40,7 @@ class BrandController extends Controller {
       $brand->slug = strtolower(str_replace(' ', '-', trim($request->name_en)));
       $brand->save();
 
-      return redirect()
-        ->route('brands.index')
-        ->with(toastr('success', 'Created a new brand.'));
+      return $this->backWith('success', 'Created a new brand.');
     } catch (QueryException) {
       File::delete($imagePath);
 
@@ -52,9 +50,7 @@ class BrandController extends Controller {
     } catch (\Exception) {
       File::delete($imagePath);
 
-      return redirect()
-        ->back()
-        ->with(toastr('error', 'Something went wrong. try again.'));
+      return $this->backWidth('error', 'Something went wrong. try again.');
     }
   }
 
@@ -89,13 +85,15 @@ class BrandController extends Controller {
     //
   }
 
-  /**
-   * Remove the specified resource from storage.
-   *
-   * @param  \App\Models\Brand  $brand
-   * @return \Illuminate\Http\Response
-   */
-  public function destroy(Brand $brand) {
-    //
+  public function destroy(Request $request, $brand) {
+    Brand::find($brand)->delete();
+
+    return $this->backWith('success', 'Brand Deleted.');
+  }
+
+  private function backWith($status, $message) {
+    return redirect()
+      ->back()
+      ->with(toastr($status, $message));
   }
 }

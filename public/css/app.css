@@ -1244,6 +1244,9 @@ select {
 .block {
 	display: block;
 }
+.inline-block {
+	display: inline-block;
+}
 .flex {
 	display: flex;
 }
