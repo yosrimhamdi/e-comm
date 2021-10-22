@@ -13,7 +13,7 @@
       >
         @csrf
         <div class="form-group">
-          <label for="exampleInputEmail1">English Name</label>
+          <label for="exampleInputEmail1">English Name <span class="text-danger">*</span></label>
           <input
             type="text"
             class="form-control"
@@ -24,7 +24,7 @@
           <x-error input="name_en" />
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">French Name</label>
+          <label for="exampleInputPassword1">French Name <span class="text-danger">*</span></label>
           <input
             type="text"
             class="form-control"
@@ -34,7 +34,7 @@
           <x-error input="name_fr" />
         </div>
         <div class="form-group">
-          <label for="image">Brand Image</label>
+          <label for="image">Brand Image <span class="text-danger">*</span></label>
           <input
             type="file"
             class="form-control"
