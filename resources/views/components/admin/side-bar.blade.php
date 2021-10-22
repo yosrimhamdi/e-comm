@@ -22,14 +22,6 @@
       class="sidebar-menu"
       data-widget="tree"
     >
-
-      <x-admin.side-bar-menu-group end-point="admin/dashboard">
-        <a href="{{ url('/admin/dashboard') }}">
-          <i data-feather="pie-chart"></i>
-          <span>Dashboard</span>
-        </a>
-      </x-admin.side-bar-menu-group>
-
       <x-admin.side-bar-menu-group end-point="brands">
         <a href="#">
           <i data-feather="message-circle"></i>
