@@ -28,7 +28,7 @@ class ProfileController extends Controller {
     $admin = admin();
 
     if ($photo) {
-      $photoPath = $this->uploadPhoto($photo, 'admin/photos/');
+      $photoPath = $this->uploadPhoto($photo, 'images/photos/admins/');
 
       if ($admin->profile_photo_path != 'admin/photos/default.png') {
         File::delete($admin->profile_photo_path);
