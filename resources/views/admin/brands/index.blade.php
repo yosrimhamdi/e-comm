@@ -87,7 +87,7 @@
                       <form
                         style="display: inline-block"
                         method="POST"
-                        action="{{ url('/admin/brands/' . $brand->id) }}"
+                        action="{{ route('brands.destroy', $brand->id) }}"
                       >
                         @method('DELETE')
                         @csrf
