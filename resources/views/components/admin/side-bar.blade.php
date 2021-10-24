@@ -292,7 +292,10 @@
         const prevActiveMenu = document.querySelector('.active');
 
         setTimeout(() => {
-          prevActiveMenu.classList.remove('active');
+          if (prevActiveMenu) {
+            prevActiveMenu.classList.remove('active');
+          }
+
           menu.classList.toggle('active');
         }, 0);
       }
