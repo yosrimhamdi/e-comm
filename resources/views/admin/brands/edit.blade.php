@@ -8,7 +8,7 @@
       <form
         class="row"
         method="POST"
-        action="{{ url('/admin/brands/' . $brand->id) }}"
+        action="{{ route('brands.update', $brand->id) }}"
         enctype="multipart/form-data"
       >
         @csrf
