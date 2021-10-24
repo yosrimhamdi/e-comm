@@ -11,7 +11,7 @@ use File;
 
 class BrandController extends Controller {
   use UploadImage;
-  public const BRANDS_IMAGE_PATH = 'images/brands/';
+  const BRANDS_IMAGE_PATH = 'images/brands/';
 
   public function index() {
     $brands = Brand::all();
@@ -32,7 +32,7 @@ class BrandController extends Controller {
 
     try {
       $brandImage = $request->file('image');
-      $imagePath = $this->uploadImage($brandImage, BRANDS_IMAGE_PATH);
+      $imagePath = $this->uploadImage($brandImage, self::BRANDS_IMAGE_PATH);
 
       $brand = new Brand();
       $brand->name_en = trim($request->name_en);
@@ -72,7 +72,10 @@ class BrandController extends Controller {
 
     if ($brandNewImage) {
       File::delete($brand->imageURL);
-      $brand->imageURL = $this->uploadImage($brandNewImage, BRANDS_IMAGE_PATH);
+      $brand->imageURL = $this->uploadImage(
+        $brandNewImage,
+        self::BRANDS_IMAGE_PATH
+      );
     }
 
     $brand->save();
