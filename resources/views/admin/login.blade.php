@@ -63,6 +63,7 @@
                       placeholder="Email"
                       name="email"
                     >
+                    <x-error input="email" />
                   </div>
                 </div>
                 <div class="form-group">
@@ -73,6 +74,7 @@
                       placeholder="Password"
                       name="password"
                     >
+                    <x-error input="password" />
                   </div>
                 </div>
                 <div class="row">
