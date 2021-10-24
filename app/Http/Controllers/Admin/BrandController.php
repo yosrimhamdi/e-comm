@@ -11,6 +11,7 @@ use File;
 
 class BrandController extends Controller {
   use UploadImage;
+  public const BRANDS_IMAGE_PATH = 'images/brands/';
 
   public function index() {
     $brands = Brand::all();
@@ -31,7 +32,7 @@ class BrandController extends Controller {
 
     try {
       $brandImage = $request->file('image');
-      $imagePath = $this->uploadImage($brandImage, 'images/brands/');
+      $imagePath = $this->uploadImage($brandImage, BRANDS_IMAGE_PATH);
 
       $brand = new Brand();
       $brand->name_en = trim($request->name_en);
@@ -71,22 +72,34 @@ class BrandController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function edit(Brand $brand) {
-    //
+    return view('admin.brands.edit', compact('brand'));
   }
 
-  /**
-   * Update the specified resource in storage.
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @param  \App\Models\Brand  $brand
-   * @return \Illuminate\Http\Response
-   */
   public function update(Request $request, Brand $brand) {
-    //
+    $request->validate([
+      'name_en' => 'required',
+      'name_fr' => 'required',
+    ]);
+
+    $brand->name_en = $request->name_en;
+    $brand->name_fr = $request->name_fr;
+
+    $brandNewImage = $request->file('image');
+
+    if ($brandNewImage) {
+      File::delete($brand->imageURL);
+      $brand->imageURL = $this->uploadImage($brandNewImage, BRANDS_IMAGE_PATH);
+    }
+
+    $brand->save();
+
+    return redirect()
+      ->route('brands.index')
+      ->with(toastr('success', 'brand updated'));
   }
 
-  public function destroy(Request $request, $brand) {
-    Brand::find($brand)->delete();
+  public function destroy(Brand $brand) {
+    $brand->delete();
 
     return $this->backWith('success', 'Brand Deleted.');
   }

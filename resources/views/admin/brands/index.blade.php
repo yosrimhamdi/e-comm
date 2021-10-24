@@ -81,7 +81,7 @@
                       /></td>
                     <td>
                       <a
-                        href=""
+                        href="{{ url('/admin/brands/' . $brand->id) . '/edit' }}"
                         class="btn btn-info"
                       >Edit</a>
                       <form
