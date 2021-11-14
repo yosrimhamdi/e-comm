@@ -105,7 +105,6 @@
     const deleteBtns = document.querySelectorAll('#delete-brand-btn');
 
     function deleteBrand() {
-      console.log(this);
       Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
