@@ -84,22 +84,14 @@
                         href="{{ url('/admin/brands/' . $brand->id) . '/edit' }}"
                         class="btn btn-info"
                       >Edit</a>
-                      <form
-                        style="display: inline-block"
-                        method="POST"
+                      <a
+                        type="button"
+                        class="btn btn-danger"
+                        id="delete-brand-btn"
                         action="{{ route('brands.destroy', $brand->id) }}"
-                      >
-                        @method('DELETE')
-                        @csrf
-                        <button
-                          type="submit"
-                          class="btn btn-danger"
-                        >Delete</button>
-
-                      </form>
+                      >Delete</a>
                     </td>
                   </tr>
-
                 @endforeach
                 </tbody>
               </table>
@@ -109,4 +101,27 @@
       </div>
     </div>
   </div>
+  <script>
+    const deleteBtns = document.querySelectorAll('#delete-brand-btn');
+
+    function deleteBrand() {
+      console.log(this);
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          axios.delete(this.getAttribute('action'))
+          window.location.reload();
+        }
+      });
+    };
+
+    deleteBtns.forEach(btn => btn.addEventListener('click', deleteBrand));
+  </script>
 </x-admin.base>
