@@ -10,7 +10,7 @@
     "production": "mix --production",
     "serve": "php artisan serve",
     "auto-reload": "npm run watch",
-    "start": "nodemon --exec npm-run-all -p serve auto-reload"
+    "start": "nodemon"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.3.1",

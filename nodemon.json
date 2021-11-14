@@ -1,3 +1,4 @@
 {
-  "watch": ".env"
+  "watch": ".env",
+  "exec": "npm-run-all -p serve auto-reload"
 }
