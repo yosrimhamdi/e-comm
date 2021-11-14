@@ -83,11 +83,13 @@
                       <a
                         href="{{ url('/admin/brands/' . $brand->id) . '/edit' }}"
                         class="btn btn-info"
+                        title="Edit Brand"
                       ><i class="fa fa-pencil"></i></a>
                       <a
                         type="button"
                         class="btn btn-danger"
                         id="delete-brand-btn"
+                        title="Delete Brand"
                         action="{{ route('brands.destroy', $brand->id) }}"
                       ><i class="fa fa-trash"></i></a>
                     </td>
