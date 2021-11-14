@@ -87,6 +87,7 @@ class BrandController extends Controller {
 
   public function destroy(Brand $brand) {
     $brand->delete();
+    File::delete($brand->imageURL);
 
     return $this->backWith('success', 'Brand Deleted.');
   }
